@@ -1,4 +1,4 @@
-let bruteSalary = 15000;
+let bruteSalary = 1200;
 let INSS;
 let IR;
 
