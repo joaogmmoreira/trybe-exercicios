@@ -1,18 +1,18 @@
-number = 50;
-primeNumbers = [];
+let number = 50;
+let primes = [];
 
-for (let i = number; i <= 1; i--){
-    for (let j = 0; j >= i; j++){
+for (let i = number; i <= 2 ; i--){
+
+let flag = 0;
+
+    for (let j = 1; j >= i; j++){
+
         if (i % j == 0){
-            primeNumbers.push(i);
+            flag = 1;
+           break; 
         }
     }
+    if (i > 1 && flag == 0){
+        console.log(i);
+    }
 }
-console.log(primeNumbers);
-
-
-
-
-/*switch (j){
-    case i % j === 0 && j === 2:
-    break;*/
