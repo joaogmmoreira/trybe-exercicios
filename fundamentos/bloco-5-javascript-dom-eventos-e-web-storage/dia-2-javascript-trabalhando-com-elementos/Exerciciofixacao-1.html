@@ -45,6 +45,38 @@
     //8. Agora acesse o terceiroFilho a partir de pai.
     console.log (document.getElementById('pai').lastElementChild.previousElementSibling);
 
+    //9. Crie um irmão para elementoOndeVoceEsta.
+    document.getElementById('pai').appendChild(document.createElement('section'));
+
+    console.log(document.getElementById('pai').lastElementChild);
+
+    
+    //10. Crie um filho para elementoOndeVoceEsta.
+    document.getElementById('elementoOndeVoceEsta').appendChild(document.createElement('div'));
+
+    console.log(document.getElementById('elementoOndeVoceEsta').lastElementChild);
+
+    //11. Crie um filho para primeiroFilhoDoFilho.
+      document.getElementById('primeiroFilhoDoFilho').appendChild(document.createElement('article'));
+
+      console.log(document.getElementById('primeiroFilhoDoFilho').lastElementChild);
+
+    //12. A partir desse filho criado, acesse terceiroFilho.
+      console.log (document.getElementsByTagName('article')[0].parentNode.parentNode.nextElementSibling);
+
+    //13. Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho. INCOMPLETO
+
+    let element = document.getElementById('paiDoPai');
+    console.log (element);
+
+    for (let i = 0; i < element.length; i++) {      
+
+      if (element[i].innerHTML !== 'pai' && element[i].innerHTML !== 'elementoOndeVoceEsta' && element[i].innerHTML !== 'primeiroFilhoDoFilho'){
+        element.removeChild(element[i]);
+      }
+    }
+  
+    console.log (document.getElementById('primeiroFilho'));
   </script>
 </body>
 </html>
