@@ -36,29 +36,29 @@
     </header>    
     <main class="main-content">
       <section class="center-content">
-        <p id='textoPadrao'>Texto padrão do nosso site</p>
+        <p class='textoPadrao'>Texto padrão do nosso site</p>
         <p>-----</p>
         <p>Trybe</p>
       </section>
     </main>
     <script>
 
-      document.getElementById('textoPadrao').innerHTML = 'Em 2 anos me vejo trabalhando em uma boa companhia de maneira estável';
-
+      //1. OK  
+      document.getElementsByClassName('textoPadrao')[0].innerHTML = 'Em 2 anos me vejo trabalhando em uma boa companhia de maneira estável';
+      
+      //2. OK
       document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
 
+      //3. OK
       document.querySelectorAll('.center-content')[0].style.backgroundColor = 'white';
 
+      //4. OK
       document.getElementsByClassName('title')[0].innerHTML = 'Exercício 5.1 - JavaScript';
 
-      function caps (){
-        let sentences = document.getElementsByTagName('p')[0];
-        for (let i = 0; i <= sentences.length; i ++) {
-          sentences[i] = sentences[i].toUpperCase();
-        }
-        return sentences;
-      }
+      //5.      
+      document.getElementsByTagName('p')[0].style.textTransform = 'uppercase';
 
+      //6. OK
       console.log (document.getElementsByTagName('p'));
 
 
@@ -72,7 +72,7 @@
         OK - 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
         OK - 3. Crie uma função que mude a cor do quadrado vermelho para branco.
         OK - 4. Crie uma função que corrija o texto da tag <h1>.
-        INCOMPLETO - 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        OK - 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         OK - 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
     </script>
