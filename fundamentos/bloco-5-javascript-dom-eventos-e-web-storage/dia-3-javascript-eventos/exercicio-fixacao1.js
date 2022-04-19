@@ -9,43 +9,53 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 // 1.1. OK - Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
 
-// 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre? 
+// 1.2. OK - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre? 
 
-// 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
-const container = document.getElementsByClassName('container')[0];
+// 2. OK - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 
-function changeTech(){
-  firstLi.className = 'other';
-  if (firstLi.className = 'tech'){
-    secondLi.className = 'other';
-    thirdLi.className = 'other';
+firstLi.className = 'other';
+secondLi.className = 'other';
+thirdLi.className = 'other';
 
-  } else if (secondLi.className = 'tech') {
-    firstLi.className = 'other';
-    thirdLi.className = 'other';
-
-  } else {
-    firstLi.className = 'other';
-    secondLi.className = 'other';
-  }
-
+function changeClassTech (event) {
+  event.target.className = 'tech';   
 }
 
-firstLi.addEventListener ('click', changeTech);
-secondLi.addEventListener ('click', changeTech);
-thirdLi.addEventListener ('click', changeTech);
+firstLi.addEventListener ('click', changeClassTech);
+secondLi.addEventListener ('click', changeClassTech);
+thirdLi.addEventListener ('click', changeClassTech);
 
-// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+// 2.1. INCOMPLETO! - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
-// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-// com a classe 'tech';
+function changeClassOther (event) {
+  event.target.className = 'other';
+}
 
-// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
+// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento com a classe 'tech';
+
+
+// 4. OK - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
+function redirect (event) {
+  myWebpage.innerHTML = '<a href="https://joaogmmoreira.github.io/Portfolio/">Meu top 3 do Spotrybefy</a>';
+}
 
-// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
+myWebpage.addEventListener('dblclick', redirect);
+
+
+// 5. OK - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+function changeColor1 (event) {
+  event.target.style.color = '#2fc18c';
+}
+
+function changeColor2 (event) {
+  event.target.style.color = 'white';
+}
+
+myWebpage.addEventListener('mouseover', changeColor1);
+myWebpage.addEventListener('mouseout', changeColor2);
 
 // Segue abaixo um exemplo do uso de event.target:
 
