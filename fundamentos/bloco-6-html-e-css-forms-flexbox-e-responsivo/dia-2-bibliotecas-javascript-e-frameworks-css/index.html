@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Viagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>TrybeTrip</header>
+<body>
+    <form>
+        <div id="form-content">        
+            <div class="input-content">
+                <label for="name">Nome:
+                    <input type="text" name="name" id="name" required minlength="10" maxlength="40">
+                </label>
+            </div>
+
+            <div class="input-content">
+                <label for="email">E-mail:
+                    <input type="email" name="email" id="email" required minlength="10" maxlength="50">
+                </label>
+            </div>
+
+            <div class="input-content">
+                <label for="opt1">
+                    <input type="radio" name="opt" id="opt1" class="radio">Opção 1
+                </label>
+                <label for="opt2">
+                    <input type="radio" name="opt" id="opt2" class="radio">Opção 2
+                </label>
+                <label for="opt3">
+                    <input type="radio" name="opt" id="opt3" class="radio">Opção 3
+                </label>
+                <label for="opt4">
+                    <input type="radio" name="opt" id="opt4" class="radio">Opção 4
+                </label>
+            </div>
+
+            <div class="input-content">
+                <p>Espaço para digitar a resposta:</p>                    
+                <textarea name="textArea" id="textArea" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="input-content">
+                <label for="data">Data:
+                    <input type="date" name="data" id="data">
+                </label>
+            </div>
+
+            <div class="input-content">
+                <label for="agree1">Concordo 1
+                    <input type="checkbox" name="agree1" id="agree1">
+                </label>
+            </div>
+
+            <div class="input-content">
+                <label for="agree1">Concordo 2
+                    <input type="checkbox" name="agree2" id="agree2">
+                </label>
+            </div>
+        </div>
+        <div class="buttons-class">
+            <button class="buttons" type="submit">Enviar</button>
+            <button class="buttons" type="reset">Apagar</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!-- 
+1. Adicione um framework CSS de sua escolha ao formulário que você construiu na última aula e o utilize para estilizar o formulário.
+Sugestões: Bulma , Bootstrap , Semantic UI e Materialize .
+
+2. Adicione uma biblioteca JavaScript de date picker ao formulário que você construiu na última aula. Utilize essa biblioteca no campo "Data de início" do formulário. Você pode remover as validações de data que adicionou, uma vez que a biblioteca se encarregará de permitir somente datas válidas.
+Sugestões: DatePickerX e Pikaday .
+spoiler-alert : a leitura de documentações pode parecer algo complexo de início mas é extremamente normal se você sentir alguma dificuldade. Algumas bibliotecas terão uma maneira mais direta de mostrar as informações, como é o caso da DatePickerX que indicamos acima. Outras tendem a ser mais detalhadas e exigem um pouco mais de atenção na leitura, o que pode parecer mais difícil a princípio, como a Pikaday , que também te indicamos. Sugerimos que você leia as duas documentações e escolha a que você compreender melhor a utilização. E não se preocupe, pois ler documentações fará parte de sua rotina na sua vida de pessoa desenvolvedora, e a experiência junto com a prática torna tudo mais intuitivo e simples.
+3. Adicione uma biblioteca JavaScript de validações ao formulário que você construiu na última aula. Utilize essa biblioteca para substituir as validações que você fez manualmente.
+Sugestões: Just-validate e popup-validation -->
+
