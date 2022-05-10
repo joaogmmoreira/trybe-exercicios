@@ -15,38 +15,31 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
-
-    const verifyEmpty = (value1, value2) => {
-      if (value1.length === 0 || value2.length === 0) {
-        throw new Error('insira números nos dois campos')
+    const twoValues = (value1, value2) => {
+      if (value1.length < 1 || value2.length < 1) {
+        throw new Error (`Você deve digitar dois valores, um em cada campo!`);
+      }
+      if (isNaN(value1) === true || isNaN(value2) === true) {
+        throw new Error (`Você só deve digitar números!`);
       }
     }
-    // const verifyNumbers = (value1, value2) => {
-    //   if (isNaN(value1) === true || isNaN(value2) === true) {
-    //     throw new Error ('Apenas Números');
-    //   }
-    //   // if (typeof value1 !== 'number' || typeof value2 !== 'number') {
-    //   //   throw new Error ('Apenas Números');
-    //   // }
-    // }
 
     function sum() {
-
       try {
-        
-        const value1 = parseInt(document.getElementById('value1').value);
-        const value2 = parseInt(document.getElementById('value2').value);
+        const value1 = document.getElementById('value1').value;
+        const value2 = document.getElementById('value2').value;
+        twoValues(value1, value2);
         const result = parseInt(value1) + parseInt(value2);
-        verifyEmpty (value1, value2);
-        // verifyNumbers (value1, value2);
         document.getElementById('result').innerHTML = `Resultado: ${result}`;
         document.getElementById('value1').value = '';
         document.getElementById('value2').value = '';
-        
       } catch (error) {
-        throw error.message;
+        document.getElementById('result').innerHTML = `Resultado: ${error.message}`;
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
       }
     }
+
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', sum);
