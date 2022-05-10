@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+  <div>
+    <span id ="text"></span>
+  </div>
+  <button id="button_test">click aqui!</button>
+</body>
+<script>
+  let clickCount = 0;
+
+  const display = document.getElementById('text');
+  const btn = document.getElementById('button_test');
+  btn.addEventListener('click', () => {
+    display.innerText = clickCount ++;
+  })
+</script>
+</html>
