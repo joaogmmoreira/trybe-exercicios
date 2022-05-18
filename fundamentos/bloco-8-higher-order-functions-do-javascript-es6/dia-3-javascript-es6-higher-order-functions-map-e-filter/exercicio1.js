@@ -87,8 +87,14 @@ function oldBooksOrdered(arr) {
 
 //------------------------------------------------------------------------------------------
 function fantasyOrScienceFictionAuthors(arr) {
-  return arr
-  .filter((element) => element.genre === 'Fantasia' || element.genre === 'Ficção Científica').map((element) => element.author.name).sort();
+  return arr.filter((element) => element.genre === 'Fantasia' || element.genre === 'Ficção Científica').map((element2) => element2.author.name).sort();
 }
+// console.log(fantasyOrScienceFictionAuthors(books))
 
-console.log(fantasyOrScienceFiction(books))
+//------------------------------------------------------------------------------------------
+function oldBooks(arr) {
+  return arr.filter((element) => 2022 - element.releaseYear > 60).map((element2) => element2.name);
+}
+// console.log(oldBooks(books))
+
+//------------------------------------------------------------------------------------------
