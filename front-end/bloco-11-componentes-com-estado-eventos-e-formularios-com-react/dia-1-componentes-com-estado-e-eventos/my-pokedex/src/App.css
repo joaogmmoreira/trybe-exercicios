@@ -1,0 +1,31 @@
+header {
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+}
+
+.eachPokemonFather {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.eachPokemon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+.insidePokemon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
